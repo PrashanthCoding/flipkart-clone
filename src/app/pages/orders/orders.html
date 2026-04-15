@@ -1,0 +1,27 @@
+<h2>My Orders</h2>
+
+<div *ngIf="orders.length === 0" class="empty">No orders yet 😢</div>
+
+<div *ngFor="let order of orders" class="order-card">
+  <div class="order-header">
+    <span>Order ID: {{ order.id }}</span>
+    <span class="status">{{ order.status }}</span>
+  </div>
+
+  <div class="order-date">
+    {{ order.date | date: 'medium' }}
+  </div>
+
+  <div class="items">
+    <div *ngFor="let item of order.items" class="item">
+      <img [src]="item.image" />
+
+      <div>
+        <h4>{{ item.name }}</h4>
+        <p>₹{{ item.price }} × {{ item.quantity }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="total">Total: ₹{{ order.total }}</div>
+</div>

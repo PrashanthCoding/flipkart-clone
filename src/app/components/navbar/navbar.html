@@ -1,0 +1,20 @@
+<div class="navbar">
+  <div class="logo" routerLink="/">Flipkart</div>
+
+  <!-- SEARCH -->
+  <div class="search-box">
+    <input
+      type="text"
+      placeholder="Search for Products..."
+      [(ngModel)]="searchText"
+      (input)="onSearch()"
+    />
+  </div>
+
+  <!-- MENU -->
+  <div class="menu">
+    <a routerLink="/" routerLinkActive="active">Home</a>
+    <a routerLink="/cart" routerLinkActive="active">Cart</a>
+    <a routerLink="/orders" routerLinkActive="active">Orders</a>
+  </div>
+</div>

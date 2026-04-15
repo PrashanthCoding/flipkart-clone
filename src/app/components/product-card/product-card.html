@@ -1,0 +1,21 @@
+<div class="card" *ngIf="product">
+  <img [src]="product.image" />
+
+  <h3>{{ product.name }}</h3>
+  <p>₹{{ product.price }}</p>
+
+  <button (click)="openPopup()">Add to Cart</button>
+</div>
+
+<!-- POPUP MODAL -->
+<div class="modal" *ngIf="showPopup">
+  <div class="modal-content">
+    <h3>Add to Cart</h3>
+    <p>Do you want to add this product?</p>
+
+    <div class="actions">
+      <button class="yes" (click)="confirmAdd()">Yes</button>
+      <button class="no" (click)="closePopup()">No</button>
+    </div>
+  </div>
+</div>

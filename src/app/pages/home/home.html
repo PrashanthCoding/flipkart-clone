@@ -1,0 +1,7 @@
+<div class="container">
+  <app-product-card *ngFor="let product of filteredProducts" [product]="product">
+  </app-product-card>
+</div>
+
+<!-- NO RESULT -->
+<div *ngIf="filteredProducts.length === 0" class="no-result">No products found 😢</div>

@@ -1,0 +1,55 @@
+.container {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+
+  /* DESKTOP */
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* MAIN CONTAINER */
+.container {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  background: #f1f3f6; /* Flipkart bg */
+
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* PRODUCT CARD FIX */
+app-product-card {
+  display: block;
+  height: 100%;
+}
+
+/* NO RESULT */
+.no-result {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
+  color: gray;
+}
+
+/* 💻 LARGE LAPTOP */
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 📲 TABLET */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px;
+  }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10px;
+  }
+}

@@ -1,0 +1,17 @@
+<div class="product-page" *ngIf="product">
+  <!-- LEFT IMAGE -->
+  <div class="image-section">
+    <img [src]="product.image" />
+  </div>
+
+  <!-- RIGHT DETAILS -->
+  <div class="details-section">
+    <h2>{{ product.name }}</h2>
+
+    <p class="desc">{{ product.description }}</p>
+
+    <h3 class="price">₹{{ product.price }}</h3>
+
+    <button (click)="addToCart()">Add to Cart</button>
+  </div>
+</div>

@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL FONT */
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f3f6;
+}
+
+/* CONTAINER WIDTH */
+.container {
+  width: 100%;
+  margin: auto;
+}

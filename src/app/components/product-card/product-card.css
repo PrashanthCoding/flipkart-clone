@@ -1,0 +1,157 @@
+/* 🔥 PRODUCT CARD */
+.card {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  background: white;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* IMAGE */
+img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* NAME */
+h3 {
+  font-size: 16px;
+  margin: 5px 0;
+  min-height: 40px;
+}
+
+/* PRICE */
+p {
+  font-weight: bold;
+  color: #388e3c;
+  margin: 5px 0;
+}
+
+/* BUTTON */
+button {
+  background: #ff9f00;
+  border: none;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  margin-top: auto;
+  border-radius: 4px;
+  width: 100%;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #fb641b;
+}
+
+/* 🔥 MODAL OVERLAY */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  z-index: 9999;
+}
+
+/* MODAL BOX */
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ACTIONS */
+.actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* YES BUTTON */
+.yes {
+  background: green;
+  flex: 1;
+  margin-right: 10px;
+}
+
+/* NO BUTTON */
+.no {
+  background: red;
+  flex: 1;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+  img {
+    height: 150px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 13px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .card {
+    padding: 10px;
+  }
+
+  img {
+    height: 130px;
+  }
+
+  h3 {
+    font-size: 13px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  /* MODAL BUTTON STACK */
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .yes,
+  .no {
+    width: 100%;
+    margin: 0;
+  }
+}
